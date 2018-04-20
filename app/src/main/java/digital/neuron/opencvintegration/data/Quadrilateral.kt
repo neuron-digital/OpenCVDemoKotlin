@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration.views
+package digital.neuron.opencvintegration.data
 
 import org.opencv.core.MatOfPoint2f
 import org.opencv.core.Point

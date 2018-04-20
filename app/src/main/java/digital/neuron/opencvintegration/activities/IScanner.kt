@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration.views
+package digital.neuron.opencvintegration.activities
 
 import android.graphics.Bitmap
 import android.graphics.Paint

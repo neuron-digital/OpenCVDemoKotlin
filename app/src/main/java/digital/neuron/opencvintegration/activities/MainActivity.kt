@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
-import digital.neuron.opencvintegration.views.IScanner
 import digital.neuron.opencvintegration.R
 import digital.neuron.opencvintegration.data.ScanHint
 import digital.neuron.opencvintegration.views.ScanSurfaceView
@@ -28,6 +27,7 @@ class MainActivity : AppCompatActivity(), IScanner {
     }
 
     private var isPermissionNotGranted: Boolean = false
+    private val previewHandler = CameraPreviewHandler(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), IScanner {
             }
         } else {
             if (!isPermissionNotGranted) {
-                cameraPreviewLayout.addView(ScanSurfaceView(this, this))
+                cameraPreviewLayout.addView(ScanSurfaceView(this, previewHandler))
             } else {
                 isPermissionNotGranted = false
             }
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity(), IScanner {
         if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             Handler().postDelayed({
                 runOnUiThread {
-                    cameraPreviewLayout.addView(ScanSurfaceView(this, this))
+                    cameraPreviewLayout.addView(ScanSurfaceView(this, previewHandler))
                 }
             }, 500)
         } else {
