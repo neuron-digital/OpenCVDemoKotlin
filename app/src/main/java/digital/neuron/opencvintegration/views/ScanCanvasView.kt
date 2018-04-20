@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.views
 
 import android.content.Context
 import android.graphics.Canvas

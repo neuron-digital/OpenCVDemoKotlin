@@ -1,8 +1,9 @@
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.views
 
 import android.graphics.Bitmap
 import android.graphics.Paint
 import android.graphics.drawable.shapes.Shape
+import digital.neuron.opencvintegration.data.ScanHint
 
 interface IScanner {
     fun displayHint(scanHint: ScanHint)

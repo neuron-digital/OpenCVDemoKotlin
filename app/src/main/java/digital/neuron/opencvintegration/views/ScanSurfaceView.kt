@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.views
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -18,6 +18,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import digital.neuron.opencvintegration.data.ScanHint
 
 import org.opencv.core.Mat
 import org.opencv.core.MatOfPoint2f

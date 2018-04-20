@@ -29,7 +29,7 @@ import java.io.FileOutputStream
 import java.util.ArrayList
 import java.util.Comparator
 
-import digital.neuron.opencvintegration.Quadrilateral
+import digital.neuron.opencvintegration.views.Quadrilateral
 
 import org.opencv.core.CvType.CV_8UC1
 import org.opencv.imgproc.Imgproc.THRESH_BINARY

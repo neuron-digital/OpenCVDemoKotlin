@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.views
 
 /**
  * This class defines constants

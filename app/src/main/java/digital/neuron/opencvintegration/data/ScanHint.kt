@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.data
 
 /**
  * Enum that defines receipt detection messages

@@ -1,4 +1,4 @@
-package digital.neuron.opencvintegration
+package digital.neuron.opencvintegration.activities
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -10,6 +10,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import digital.neuron.opencvintegration.views.IScanner
+import digital.neuron.opencvintegration.R
+import digital.neuron.opencvintegration.data.ScanHint
+import digital.neuron.opencvintegration.views.ScanSurfaceView
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
