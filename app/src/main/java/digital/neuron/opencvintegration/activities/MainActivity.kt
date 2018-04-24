@@ -92,14 +92,18 @@ class MainActivity : AppCompatActivity(), IScanner {
 
     override fun displayHint(scanHint: ScanHint) {
         when (scanHint) {
-            ScanHint.MOVE_CLOSER -> toast(R.string.move_closer)
-            ScanHint.MOVE_AWAY -> toast(R.string.move_away)
-            ScanHint.ADJUST_ANGLE -> toast(R.string.adjust_angle)
-            ScanHint.FIND_RECT -> toast(R.string.finding_rect)
-            ScanHint.CAPTURING_IMAGE -> toast(R.string.hold_still)
-            ScanHint.CAPTURED -> toast(R.string.captured)
+            ScanHint.MOVE_CLOSER -> showInfo(R.string.move_closer)
+            ScanHint.MOVE_AWAY -> showInfo(R.string.move_away)
+            ScanHint.ADJUST_ANGLE -> showInfo(R.string.adjust_angle)
+            ScanHint.FIND_RECT -> showInfo(R.string.finding_rect)
+            ScanHint.CAPTURING_IMAGE -> showInfo(R.string.hold_still)
+            ScanHint.CAPTURED -> showInfo(R.string.captured)
             else -> {
             }
         }
+    }
+
+    private fun showInfo(message: Int) {
+        infoText.text = getString(message)
     }
 }
